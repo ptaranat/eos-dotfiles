@@ -2,6 +2,10 @@
 alias reload="exec zsh"
 alias e=$EDITOR
 alias c="clear"
+alias h="history -10"
+alias hg="history | grep"
+alias ZZ="exit"
+alias py="python"
 
 # Overrides
 alias cp="cp -i"
@@ -36,6 +40,9 @@ alias disks='echo "╓───── m o u n t . p o i n t s"; \
 
 # GitHub CLI
 alias ghc="gh repo clone"
+
+# Update cargo packages using cargo-update
+alias cargoupdate="cargo install-update -a"
 
 # Files
 alias -s md="glow -p"
