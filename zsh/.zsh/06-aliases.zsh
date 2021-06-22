@@ -6,6 +6,8 @@ alias h="history -10"
 alias hg="history | grep"
 alias ZZ="exit"
 alias py="python"
+alias code="vscodium"
+alias notes="cd $NOTES_DIR"
 
 # Overrides
 alias cp="cp -i"
