@@ -17,7 +17,7 @@ export LESS='--mouse --wheel-lines=3 -r'
 export BAT_THEME=base16
 
 # Notes directory
-export NOTES_DIR='$HOME/Documents/notes'
+export NOTES_DIR=$HOME/Documents/notes
 
 # Language
 export LANG=en_US.UTF-8
@@ -26,3 +26,7 @@ export LANG=en_US.UTF-8
 export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
+
+# fzf + rg
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/*" 2> /dev/null'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
