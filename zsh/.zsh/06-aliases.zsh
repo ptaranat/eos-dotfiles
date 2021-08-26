@@ -40,6 +40,9 @@ alias disks='echo "╓───── m o u n t . p o i n t s"; \
 			echo "╙────────────────────────────────────── ─ ─ "; \
 			df -h;'
 
+# Recursively convert line endings to Unix
+alias fixdos="find . -type f -print0 | xargs -0 dos2unix"
+
 # GitHub CLI
 alias ghc="gh repo clone"
 
