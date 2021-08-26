@@ -1,4 +1,5 @@
 # Paths
+path=($(go env GOPATH)/bin $path)
 path=($HOME/.local/bin $path)
 path=($HOME/bin $path)
 path=($PYENV_ROOT/bin $path)
@@ -21,6 +22,9 @@ export NOTES_DIR=$HOME/Documents/notes
 
 # Language
 export LANG=en_US.UTF-8
+
+# Python
+export PYTHONPATH="/usr/bin/python3"
 
 # Pyenv
 export PYENV_ROOT="$HOME/.pyenv"
