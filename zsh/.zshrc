@@ -15,11 +15,11 @@ znap source romkatv/powerlevel10k
 # Plugins
 znap source ohmyzsh/ohmyzsh
 znap source ohmyzsh/ohmyzsh \
-	plugins/{git,archlinux,autojump,colored-man-pages,gpg-agent} \
-	plugins/{fd,fzf} \
+	plugins/{git,archlinux,colored-man-pages,gpg-agent} \
+	plugins/fzf \
 	plugins/{python,pip} \
 	plugins/golang \
-	plugins/{ansible,aws,docker,terraform}
+	plugins/{ansible,aws,terraform}
 
 znap source djui/alias-tips
 znap source marlonrichert/zsh-hist
@@ -35,7 +35,7 @@ bindkey '^[[B' history-substring-search-down
 ZSH_AUTOSUGGEST_STRATEGY=(history)
 znap source zsh-users/zsh-autosuggestions
 
-plugins=()
+plugins=(autojump,fd,docker)
 
 # User configuration
 export ZSH_CUSTOM="$HOME/.zsh"
