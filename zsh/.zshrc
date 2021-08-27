@@ -35,7 +35,7 @@ bindkey '^[[B' history-substring-search-down
 ZSH_AUTOSUGGEST_STRATEGY=(history)
 znap source zsh-users/zsh-autosuggestions
 
-plugins=(autojump,fd,docker)
+plugins=(fd,docker,autojump)
 
 # User configuration
 export ZSH_CUSTOM="$HOME/.zsh"
@@ -48,6 +48,8 @@ if [[ ! -d "$ZSH/completions" || ! -f "$ZSH/completions/_gh" ]]; then
 	gh completion --shell zsh > $ZSH/completions/_gh
 	echo "gh added completions: gh completion --shell zsh > $ZSH/completions/_gh"
 fi
+
+[[ -s /etc/profile.d/autojump.sh ]] && source /etc/profile.d/autojump.sh
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 #autoload -U +X bashcompinit && bashcompinit
