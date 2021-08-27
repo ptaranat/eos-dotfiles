@@ -16,7 +16,7 @@ znap source romkatv/powerlevel10k
 znap source ohmyzsh/ohmyzsh
 znap source ohmyzsh/ohmyzsh \
 	plugins/{git,archlinux,colored-man-pages,gpg-agent} \
-	plugins/fzf \
+	plugins/{fzf,vi-mode} \
 	plugins/{python,pip} \
 	plugins/golang \
 	plugins/{ansible,aws,terraform}

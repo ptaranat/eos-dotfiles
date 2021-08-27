@@ -13,6 +13,7 @@ alias notes="cd $NOTES_DIR"
 alias cp="cp -i"
 alias mv="mv -i"
 alias rm="rm -I"
+alias rmrf="rm -rf"
 
 # Replace ls with exa
 alias ls="exa"
