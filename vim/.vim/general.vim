@@ -84,6 +84,9 @@ autocmd FileType c,cpp,java,php,js,python,twig,xml,yml autocmd BufWritePre <buff
 " make git commit open in insert mode
 autocmd FileType gitcommit exec 'au VimEnter * startinsert'
 
+" spell check and dictionary completion
+autocmd FileType gitcommit,markdown setlocal spell complete+=kspell
+
 " make ; works like : for commands. lazy shifting
 "nnoremap ; :
 
