@@ -9,8 +9,8 @@ alias py="python"
 alias code="vscodium"
 alias notes="cd $NOTES_DIR"
 alias gcal="gcalcli"
-alias week="gcalcli calw --noweekend --width=24"
-alias agenda="gcalcli agenda"
+alias week="gcalcli calw --noweekend --width=24 --color-now-marker brightblue"
+alias agenda="gcalcli agenda --color-now-marker brightblue"
 
 # Overrides
 alias cp="cp -i"
