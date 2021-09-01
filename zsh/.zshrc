@@ -17,7 +17,6 @@ znap install ohmyzsh/ohmyzsh
 znap source ohmyzsh/ohmyzsh
 znap source ohmyzsh/ohmyzsh \
 	plugins/{git,archlinux,colored-man-pages,gpg-agent} \
-	plugins/{fzf,vi-mode} \
 	plugins/{python,pip} \
 	plugins/golang \
 	plugins/{ansible,aws,terraform}
@@ -28,6 +27,9 @@ znap source djui/alias-tips
 znap source marlonrichert/zsh-hist
 znap source zdharma/fast-syntax-highlighting
 znap source changyuheng/zsh-interactive-cd
+znap source jeffreytse/zsh-vi-mode
+# Add fzf bindings after vi-mode
+zvm_after_init_commands+=('znap source ohmyzsh/ohmyzsh plugins/fzf')
 
 # Zsh-users
 znap source zsh-users/zsh-completions
