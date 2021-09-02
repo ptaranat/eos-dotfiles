@@ -14,14 +14,13 @@ znap source romkatv/powerlevel10k
 
 # Plugins
 znap install ohmyzsh/ohmyzsh
-znap source ohmyzsh/ohmyzsh
 znap source ohmyzsh/ohmyzsh \
 	plugins/{git,archlinux,colored-man-pages,gpg-agent} \
 	plugins/{python,pip} \
 	plugins/golang \
 	plugins/{ansible,aws,terraform}
 
-fpath+=( ~[ohmyzsh]/{docker,fd,ripgrep})
+fpath+=( ~[ohmyzsh]/{docker,fd,gh,ripgrep})
 
 znap source djui/alias-tips
 znap source marlonrichert/zsh-hist
