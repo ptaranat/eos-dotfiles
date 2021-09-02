@@ -39,6 +39,8 @@ bindkey '^[[B' history-substring-search-down
 ZSH_AUTOSUGGEST_STRATEGY=(history)
 znap source zsh-users/zsh-autosuggestions
 
+znap source ohmyzsh/ohmyzsh
+
 plugins=()
 
 # User configuration
