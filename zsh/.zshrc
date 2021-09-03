@@ -26,6 +26,7 @@ znap source djui/alias-tips
 znap source marlonrichert/zsh-hist
 znap source zdharma/fast-syntax-highlighting
 znap source changyuheng/zsh-interactive-cd
+znap source ptaranat/omz-autojump
 znap source jeffreytse/zsh-vi-mode
 # Add fzf bindings after vi-mode
 zvm_after_init_commands+=('znap source ohmyzsh/ohmyzsh plugins/fzf')
@@ -54,8 +55,6 @@ if [[ ! -d "$ZSH/completions" || ! -f "$ZSH/completions/_gh" ]]; then
 	gh completion --shell zsh > $ZSH/completions/_gh
 	echo "gh added completions: gh completion --shell zsh > $ZSH/completions/_gh"
 fi
-
-[[ -s /etc/profile.d/autojump.sh ]] && source /etc/profile.d/autojump.sh
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 #autoload -U +X bashcompinit && bashcompinit
