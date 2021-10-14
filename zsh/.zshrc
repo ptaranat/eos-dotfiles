@@ -18,6 +18,7 @@ znap source ohmyzsh/ohmyzsh \
 	plugins/{git,archlinux,colored-man-pages,gpg-agent} \
 	plugins/{python,pip} \
 	plugins/golang \
+	plugins/{npm,yarn} \
 	plugins/{ansible,aws,terraform}
 
 fpath+=( ~[ohmyzsh]/{docker,fd,gh,ripgrep})
