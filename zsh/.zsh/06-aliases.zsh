@@ -11,6 +11,8 @@ alias notes="cd $NOTES_DIR"
 alias gcal="gcalcli"
 alias week="gcalcli calw --noweekend --width=24 --color-now-marker brightblue"
 alias agenda="gcalcli agenda --color-now-marker brightblue"
+alias tfer="terraformer"
+alias blue="_ systemctl restart bluetooth"
 
 # Overrides
 alias cp="cp -i"
