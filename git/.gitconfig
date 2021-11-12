@@ -51,3 +51,16 @@
 	required = true
 [rebase]
 	autosquash = true
+[maintenance]
+	repo = /home/panat/.zsh_plugins/alias-tips
+	repo = /home/panat/.zsh_plugins/fast-syntax-highlighting
+	repo = /home/panat/.zsh_plugins/ohmyzsh
+	repo = /home/panat/.zsh_plugins/omz-autojump
+	repo = /home/panat/.zsh_plugins/powerlevel10k
+	repo = /home/panat/.zsh_plugins/zsh-autosuggestions
+	repo = /home/panat/.zsh_plugins/zsh-completions
+	repo = /home/panat/.zsh_plugins/zsh-hist
+	repo = /home/panat/.zsh_plugins/zsh-history-substring-search
+	repo = /home/panat/.zsh_plugins/zsh-interactive-cd
+	repo = /home/panat/.zsh_plugins/zsh-snap
+	repo = /home/panat/.zsh_plugins/zsh-vi-mode
