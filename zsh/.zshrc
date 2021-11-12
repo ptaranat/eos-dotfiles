@@ -50,13 +50,6 @@ export ZSH_CUSTOM="$HOME/.zsh"
 # Source custom zsh files
 for config ($HOME/.zsh/*.zsh) source $config
 
-# GitHub CLI completions
-if [[ ! -d "$ZSH/completions" || ! -f "$ZSH/completions/_gh" ]]; then
-	mkdir -pv $ZSH/completions
-	gh completion --shell zsh > $ZSH/completions/_gh
-	echo "gh added completions: gh completion --shell zsh > $ZSH/completions/_gh"
-fi
-
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 #autoload -U +X bashcompinit && bashcompinit
 autoload -U compinit && compinit
