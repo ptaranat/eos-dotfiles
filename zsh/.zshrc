@@ -21,7 +21,7 @@ znap source ohmyzsh/ohmyzsh \
 	plugins/{npm,yarn} \
 	plugins/{ansible,aws,terraform}
 
-fpath+=( ~[ohmyzsh]/{docker,fd,gh,ripgrep})
+fpath+=( ~[ohmyzsh]/{docker,fd,gh,ripgrep,kubectl,minikube})
 
 znap source djui/alias-tips
 znap source marlonrichert/zsh-hist
@@ -31,6 +31,7 @@ znap source ptaranat/omz-autojump
 znap source jeffreytse/zsh-vi-mode
 # Add fzf bindings after vi-mode
 zvm_after_init_commands+=('znap source ohmyzsh/ohmyzsh plugins/fzf')
+zvm_after_init_commands+=('znap source changyuheng/zsh-interactive-cd')
 
 # Zsh-users
 znap source zsh-users/zsh-completions
