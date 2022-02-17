@@ -20,7 +20,6 @@ znap source ohmyzsh/ohmyzsh \
 	plugins/golang \
 	plugins/{node,npm,yarn} \
 	plugins/{ruby,gem} \
-	plugins/{kubectl,minikube} \
 	plugins/{ansible,aws,terraform}
 
 znap source djui/alias-tips
@@ -63,4 +62,4 @@ for config ($HOME/.zsh/*.zsh) source $config
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 #autoload -U +X bashcompinit && bashcompinit
-autoload -U compinit && compinit
+# autoload -U compinit && compinit
