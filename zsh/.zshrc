@@ -18,21 +18,20 @@ znap source ohmyzsh/ohmyzsh \
 	plugins/{git,archlinux,colored-man-pages,gpg-agent} \
 	plugins/{python,pip} \
 	plugins/golang \
-	plugins/{npm,yarn} \
+	plugins/{node,npm,yarn} \
+	plugins/{ruby,gem} \
+	plugins/{kubectl,minikube} \
 	plugins/{ansible,aws,terraform}
-
-fpath+=( ~[ohmyzsh]/{docker,fd,gh,ripgrep,kubectl,minikube})
 
 znap source djui/alias-tips
 znap source marlonrichert/zsh-hist
 znap source zdharma/fast-syntax-highlighting
-znap source changyuheng/zsh-interactive-cd
 znap source ptaranat/omz-autojump
 znap source jeffreytse/zsh-vi-mode
-# Add fzf bindings after vi-mode
-zvm_after_init_commands+=('znap source ohmyzsh/ohmyzsh plugins/fzf')
+export ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_BLINKING_UNDERLINE
 zvm_after_init_commands+=('znap source changyuheng/zsh-interactive-cd')
-
+# Don't install fzf as this plugin does
+zvm_after_init_commands+=('znap source unixorn/fzf-zsh-plugin')
 # Zsh-users
 znap source zsh-users/zsh-completions
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
@@ -43,6 +42,17 @@ ZSH_AUTOSUGGEST_STRATEGY=(history)
 znap source zsh-users/zsh-autosuggestions
 
 znap source ohmyzsh/ohmyzsh
+# Speed up pasting w/ autosuggest
+pasteinit() {
+  OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
+  zle -N self-insert url-quote-magic
+}
+
+pastefinish() {
+  zle -N self-insert $OLD_SELF_INSERT
+}
+zstyle :bracketed-paste-magic paste-init pasteinit
+zstyle :bracketed-paste-magic paste-finish pastefinish
 
 plugins=()
 
