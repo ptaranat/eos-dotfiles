@@ -23,6 +23,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'psf/black'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-commentary'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 if has ('nvim')
   Plug 'nvim-lua/popup.nvim'
   Plug 'nvim-lua/plenary.nvim'

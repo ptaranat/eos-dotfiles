@@ -7,8 +7,13 @@ set undofile
 set undodir=~/.vim/undo
 set noswapfile
 
-" show line numbers
-set number relativenumber
+" smart hybrid line numbers
+set number
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
+  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
+augroup END
 " ruler
 set ruler
 " file name tab completion
@@ -88,7 +93,7 @@ autocmd FileType gitcommit exec 'au VimEnter * startinsert'
 autocmd FileType gitcommit,markdown setlocal spell complete+=kspell
 
 " make ; works like : for commands. lazy shifting
-"nnoremap ; :
+nnoremap ; :
 
 " enable file type detection and do language-dependent indenting
 if has("autocmd")
