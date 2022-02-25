@@ -1,11 +1,11 @@
 font:
   normal:
     family: MesloLGS NF
-  size: 8
+  size: 10
 window:
   dimensions:
-    columns: 80
-    lines: 25
+    columns: 150
+    lines: 40
   opacity: 0.95
 cursor:
   style:
