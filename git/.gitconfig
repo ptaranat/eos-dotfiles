@@ -64,3 +64,5 @@
 	repo = /home/panat/.zsh_plugins/zsh-snap
 	repo = /home/panat/.zsh_plugins/zsh-vi-mode
 	repo = /home/panat/.zsh_plugins/fzf-zsh-plugin
+[url "ssh://git@github.com"]
+	insteadOf = https://github.com
