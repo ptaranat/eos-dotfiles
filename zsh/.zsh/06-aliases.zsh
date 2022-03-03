@@ -12,6 +12,7 @@ alias week="gcalcli calw --noweekend --width=24 --color-now-marker brightblue"
 alias agenda="gcalcli agenda --color-now-marker brightblue"
 alias tfer="terraformer"
 alias blue="_ systemctl restart bluetooth"
+alias memo="bat -p ~/.memo.md"
 
 # Overrides
 alias cp="cp -i"
@@ -76,3 +77,14 @@ function mcd() {
 		echo "Missing folder name"
 	fi
 }
+
+function note() {
+	if [ -n "$1" ]; then
+		$EDITOR "$NOTES_DIR/$1.md"
+	else
+		timestamp=$(date -u +"%Y-%m-%d")
+		filename="$NOTES_DIR/$timestamp.md"
+		$EDITOR "$filename"
+	fi
+}
+
