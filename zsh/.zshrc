@@ -25,7 +25,7 @@ znap source ohmyzsh/ohmyzsh \
 znap source djui/alias-tips
 znap source marlonrichert/zsh-hist
 znap source zdharma/fast-syntax-highlighting
-znap source ptaranat/omz-autojump
+znap eval zoxide "zoxide init --cmd j zsh"
 znap source jeffreytse/zsh-vi-mode
 export ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_BLINKING_UNDERLINE
 zvm_after_init_commands+=('znap source changyuheng/zsh-interactive-cd')
