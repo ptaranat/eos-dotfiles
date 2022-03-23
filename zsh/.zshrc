@@ -31,6 +31,7 @@ export ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_BLINKING_UNDERLINE
 zvm_after_init_commands+=('znap source changyuheng/zsh-interactive-cd')
 # Don't install fzf as this plugin does
 zvm_after_init_commands+=('znap source unixorn/fzf-zsh-plugin')
+zvm_after_init_commands+=('znap source aloxaf/fzf-tab')
 # Zsh-users
 znap source zsh-users/zsh-completions
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
