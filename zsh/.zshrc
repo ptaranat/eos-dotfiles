@@ -13,25 +13,26 @@ source ~/.zsh_plugins/zsh-snap/znap.zsh
 znap source romkatv/powerlevel10k
 
 # Plugins
-znap install ohmyzsh/ohmyzsh
+# znap install ohmyzsh/ohmyzsh
 znap source ohmyzsh/ohmyzsh \
-	plugins/{git,archlinux,colored-man-pages,gpg-agent} \
+	plugins/{archlinux,colored-man-pages,gpg-agent} \
+	plugins/{git,gitfast,git-extras} \
 	plugins/{python,pip} \
 	plugins/golang \
 	plugins/{node,npm,yarn} \
 	plugins/{ruby,gem} \
 	plugins/{ansible,aws,terraform}
 
+znap source aloxaf/fzf-tab
+znap install lukechilds/zsh-nvm
 znap source djui/alias-tips
 znap source marlonrichert/zsh-hist
 znap source zdharma/fast-syntax-highlighting
 znap eval zoxide "zoxide init --cmd j zsh"
 znap source jeffreytse/zsh-vi-mode
 export ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_BLINKING_UNDERLINE
-zvm_after_init_commands+=('znap source changyuheng/zsh-interactive-cd')
 # Don't install fzf as this plugin does
 zvm_after_init_commands+=('znap source unixorn/fzf-zsh-plugin')
-zvm_after_init_commands+=('znap source aloxaf/fzf-tab')
 # Zsh-users
 znap source zsh-users/zsh-completions
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
@@ -64,3 +65,7 @@ for config ($HOME/.zsh/*.zsh) source $config
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 #autoload -U +X bashcompinit && bashcompinit
 # autoload -U compinit && compinit
+
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
