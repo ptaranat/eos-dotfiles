@@ -44,7 +44,7 @@ Plug 'Raimondi/delimitMate'
 
 " stylize
 Plug 'itchyny/lightline.vim'
-Plug 'lukas-reineke/indent-blankline.nvim', { 'branch': 'lua' }
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
