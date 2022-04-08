@@ -31,6 +31,8 @@
 	diffFilter = delta --color-only
 [pull]
 	ff = only
+[push]
+	default = current
 [diff]
 	tool = vimdiff
 [difftool "vimdiff"]
@@ -64,5 +66,7 @@
 	repo = /home/panat/.zsh_plugins/zsh-snap
 	repo = /home/panat/.zsh_plugins/zsh-vi-mode
 	repo = /home/panat/.zsh_plugins/fzf-zsh-plugin
+	repo = /home/panat/.zsh_plugins/zoxide
+	repo = /home/panat/.zsh_plugins/fzf-tab
 [url "ssh://git@github.com"]
 	insteadOf = https://github.com
