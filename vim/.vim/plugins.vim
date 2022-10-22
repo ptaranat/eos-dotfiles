@@ -35,6 +35,7 @@ if has ('nvim')
   Plug 'glepnir/dashboard-nvim'
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'romgrk/barbar.nvim'
+  Plug 'ggandor/leap.nvim'
 endif
 " snippets
 Plug 'rafamadriz/friendly-snippets'

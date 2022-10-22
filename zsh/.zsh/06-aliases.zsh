@@ -1,6 +1,7 @@
 # Aliases
 alias reload="exec zsh"
 alias e=$EDITOR
+alias ef="fzf-find-edit"
 alias c="clear"
 alias h="history -10"
 alias hg="history | grep"
@@ -54,6 +55,7 @@ alias fixdos="find . -type f -print0 | xargs -0 dos2unix"
 
 # GitHub CLI
 alias ghc="gh repo clone"
+alias ghpr="gh pr create -w"
 
 # Update cargo packages using cargo-update
 alias cargoupdate="cargo install-update -a"

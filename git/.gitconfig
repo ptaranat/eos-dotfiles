@@ -68,5 +68,6 @@
 	repo = /home/panat/.zsh_plugins/fzf-zsh-plugin
 	repo = /home/panat/.zsh_plugins/zoxide
 	repo = /home/panat/.zsh_plugins/fzf-tab
-[url "ssh://git@github.com"]
-	insteadOf = https://github.com
+	repo = /home/panat/.zsh_plugins/zsh-nvm
+[merge]
+	conflictstyle = diff3
