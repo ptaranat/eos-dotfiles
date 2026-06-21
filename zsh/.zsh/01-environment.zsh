@@ -4,6 +4,9 @@ path=($HOME/.local/bin $path)
 path=($HOME/bin $path)
 path=($PYENV_ROOT/bin $path)
 
+if [[ "$TERM_PROGRAM" == "ghostty" ]]; then
+    export TERM=xterm-256color
+fi
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
 	export EDITOR='vim'
