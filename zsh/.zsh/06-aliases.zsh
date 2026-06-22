@@ -60,6 +60,27 @@ alias ghpr="gh pr create -w"
 # Update cargo packages using cargo-update
 alias cargoupdate="cargo install-update -a"
 
+# paru / AUR (prefix pa = parU). NB: the archlinux plugin owns the pac* pacman
+# aliases (paclean/paclr/etc.), so cache cmds use pasc/pascc to avoid collision.
+alias paupg="paru -Syu"            # full system upgrade (repos + AUR)
+alias pasu="paru -Syu --noconfirm" # upgrade, no prompts
+alias pain="paru -S"               # install
+alias pains="paru -U"              # install from local file
+alias painsd="paru -S --asdeps"    # install as dependency
+alias pare="paru -R"               # remove
+alias parem="paru -Rns"            # remove + deps + config
+alias parep="paru -Si"             # package info (remote)
+alias pareps="paru -Ss"            # search
+alias paloc="paru -Qi"             # info on installed package
+alias palocs="paru -Qs"            # search installed
+alias palst="paru -Qe"             # list explicitly installed
+alias paups="paru -Qua"            # list available AUR updates
+alias paorph="paru -Qtd"           # list orphans
+alias pasc="paru -Sc"              # clean cache
+alias pascc="paru -Scc"            # clean cache aggressively
+alias pamir="paru -Syy"            # force-refresh databases
+alias paconf="paru -Pg"            # print config stats
+
 # Files
 alias -s md="glow -p"
 
