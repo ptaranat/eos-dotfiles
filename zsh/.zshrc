@@ -33,7 +33,18 @@ bindkey '^[[B' history-substring-search-down
 ZSH_AUTOSUGGEST_STRATEGY=(history)
 znap source zsh-users/zsh-autosuggestions
 
-znap source ohmyzsh/ohmyzsh
+# OMZ lib — only the pieces we actually use, not the whole oh-my-zsh.sh
+# framework (prompt=starship, keybindings=zsh-vi-mode, ls=exa already
+# override theme-and-appearance/key-bindings/directories' ls aliases).
+#   git         -> git_current_branch/git_main_branch (git plugin needs these)
+#   directories -> ... / - / 1-9 / md / rd nav aliases
+#   history     -> HISTSIZE/SAVEHIST + hist_* setopts (no other history config)
+#   completion  -> completion zstyles (menu/colors/matchers)
+znap source ohmyzsh/ohmyzsh lib/{git,directories,history,completion}.zsh
+
+# Initialize completions (previously done by oh-my-zsh.sh)
+autoload -Uz compinit && compinit -d "${XDG_CACHE_HOME:-$HOME/.cache}/zcompdump"
+
 # Speed up pasting w/ autosuggest
 pasteinit() {
   OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
