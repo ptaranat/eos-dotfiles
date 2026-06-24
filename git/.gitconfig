@@ -67,6 +67,5 @@
 	repo = /home/panat/.zsh_plugins/fzf-zsh-plugin
 	repo = /home/panat/.zsh_plugins/zoxide
 	repo = /home/panat/.zsh_plugins/fzf-tab
-	repo = /home/panat/.zsh_plugins/zsh-nvm
 [merge]
 	conflictstyle = diff3

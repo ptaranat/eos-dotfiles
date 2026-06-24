@@ -15,7 +15,6 @@ znap source ohmyzsh/ohmyzsh \
 	plugins/{ansible,aws,terraform}
 
 znap source aloxaf/fzf-tab
-znap install lukechilds/zsh-nvm
 znap source djui/alias-tips
 znap source marlonrichert/zsh-hist
 znap source zdharma-continuum/fast-syntax-highlighting
@@ -69,6 +68,5 @@ command -v starship >/dev/null && eval "$(starship init zsh)"
 #autoload -U +X bashcompinit && bashcompinit
 # autoload -U compinit && compinit
 
-export NVM_DIR="$HOME/.config/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# fnm (Fast Node Manager)
+command -v fnm >/dev/null && eval "$(fnm env --use-on-cd)"
