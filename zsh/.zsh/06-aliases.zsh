@@ -14,6 +14,7 @@ alias agenda="gcalcli agenda --color-now-marker brightblue"
 alias tfer="terraformer"
 alias blue="_ systemctl restart bluetooth"
 alias memo="bat -p ~/.memo.md"
+alias cl="claude"
 # Yarn
 alias yup="yarn up"
 alias ywh="yarn why"

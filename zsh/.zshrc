@@ -70,3 +70,12 @@ command -v starship >/dev/null && eval "$(starship init zsh)"
 
 # fnm (Fast Node Manager)
 command -v fnm >/dev/null && eval "$(fnm env --use-on-cd)"
+
+# bun completions
+[ -s "/home/panat/.bun/_bun" ] && source "/home/panat/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+. "$HOME/.local/share/../bin/env"
